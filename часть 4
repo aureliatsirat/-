@@ -1,0 +1,29 @@
+#include <fstream>
+void SetRecord(int shotCount)
+{
+	int record = 0;
+	std::ifstream in("Record.txt");
+	if (in.is_open())
+	{
+		in >> record;
+	}
+	in.close();
+
+	if (shotCount < record)
+	{
+		std::cout << "\n" << "Это новый рекорд!";
+		std::fstream out("Record.txt");
+		if (out.is_open())
+		{
+			out << shotCount;
+		}
+		out.close();
+	}
+}
+int shotCount = 0;
+shotCount++;
+if (numberOfHitsByHuman == requiredNumberOfHits)
+	{
+		std::cout << "\n" << "\n" << "Совершено выстрелов: " << shotCount;
+		SetRecord(shotCount);
+	}
