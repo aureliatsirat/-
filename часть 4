@@ -1,5 +1,5 @@
 #include <fstream>
-void SetRecord(int shotCount)
+void SetRecord(int shotCount) // функция, которая отвечает за запись рекорда и сравнения его с другими //
 {
 	int record = 0;
 	std::ifstream in("Record.txt");
@@ -21,7 +21,8 @@ void SetRecord(int shotCount)
 	}
 }
 int shotCount = 0;
-shotCount++;
+shotCount++; // добавление счетчика выстрелов //
+
 if (numberOfHitsByHuman == requiredNumberOfHits)
 	{
 		std::cout << "\n" << "\n" << "Совершено выстрелов: " << shotCount;
